@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Vending Machine</title>
+		<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="lib/angular-material/angular-material.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/task.css">
+	</head>
+	<body ng-app="machine">
+		<h1>Vending Machine</h1>
+		<div layout="column" layout-align="center center" ng-view=""></div>
+
+		<script type="text/javascript" src="lib/angular/angular.js"></script>
+		<script type="text/javascript" src="lib/angular-route/angular-route.js"></script>
+
+		<!-- Angular Material requires Angular.js Libraries -->
+		<script src="lib/angular-animate/angular-animate.js"></script>
+		<script src="lib/angular-aria/angular-aria.js"></script>
+		<script src="lib/angular-messages/angular-messages.js"></script>
+
+		<!-- Angular Material Library -->
+		<script src="lib/angular-material/angular-material.js"></script>
+
+		<!-- CART MODULE -->
+		<script type="text/javascript" src="scripts/cart/machine.cart.module.js"></script>
+		<script type="text/javascript" src="scripts/cart/controllers/cart.controller.js"></script>
+		<script type="text/javascript" src="scripts/cart/services/change.service.js"></script>
+		<script type="text/javascript" src="scripts/cart/directives/change-statement.directive.js"></script>
+
+		<!-- MAIN MODULE -->
+		<script type="text/javascript" src="scripts/machine.module.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<div layout="column" layout-padding>
+	 <input ng-model="cartVm.buyerName" class="task" type="text" name="name" placeholder="Type the buyer name ...">
+</div>
+<div layout="row" layout-xs="column" layout-align="center">
+  <div flex layout-padding>
+    <md-radio-group ng-model="cartVm.total">
+      <md-radio-button ng-repeat="item in cartVm.items"
+                       ng-value="item.price"
+                       aria-label="{{item.name}}"
+                       class="product-selection-block">
+        <md-list-item class="md-2-line">
+          <img alt="{{ item.name }}" ng-src="img/{{ item.ref }}.jpg" class="md-avatar">
+		    <div class="md-list-item-text">
+		      <h3>{{item.name}}</h3>
+		      <p>{{item.price | currency: "€"}}</p>
+		    </div>
+        </md-list-item>
+      </md-radio-button>
+    </md-radio-group>
+  </div>
+  <div flex layout-padding>
+	<form name="cartForm">
+		<div layout="row">
+		  <md-input-container>
+		    <label>Buyer coins</label>
+		    <input type="number" name="received" ng-model="cartVm.received"
+		           ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" max="2" step="0.05" required>
+		    <div ng-messages="cartForm.received.$error">
+		      <div ng-message="required">This field is required!</div>
+		    </div>
+		  </md-input-container>
+		</div>
+		<div layout="row">
+		  <button type='button' class="task" ng-click="cartVm.buy(cartVm.received,cartVm.total)">
+		  	<span>
+		  		<span class="star left">
+		  			<span class="star right">
+		  				Buy
+		  			</span>
+		  		</span>
+		  	</span>
+		  </button>
+		</div>
+	</form>
+	<change-statement change="cartVm.change"></change-statement>
+  </div>
+</div>
+

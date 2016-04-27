@@ -1,6 +1,6 @@
 input[type=text].task {
 	border:none;
-	background: transparent url(/css/icons/starpin.png) left top no-repeat;
+	background: transparent url("icons/starpin.png") left top no-repeat;
 	padding: 0.4em 0 0.8em 2.5em;
 	border-bottom: 1px solid;
 }
@@ -59,7 +59,7 @@ button.task:active > span
 	transition: border-color 0.3s ease;
 }
 .star {
-    background-image: url(/css/icons/btnstar.png);
+    background-image: url("icons/btnstar.png");
     background-repeat: no-repeat;
 }
 

@@ -1,0 +1,75 @@
+input[type=text].task {
+	border:none;
+	background: transparent url(/css/icons/starpin.png) left top no-repeat;
+	padding: 0.4em 0 0.8em 2.5em;
+	border-bottom: 1px solid;
+}
+input[type=text].task:focus {
+	border-color: #DADADA;
+}
+button.task {
+	padding:0.313em;
+	border: 0 none;
+	border-radius: 0.2em;
+
+  	border: 0.125em solid #127678;
+  	background-color:#17989A;
+
+	-webkit-box-shadow: inset 0px 0px 0px 0.125em #1DBDBF;
+	-moz-box-shadow: inset 0px 0px 0px 0.125em #1DBDBF;
+	box-shadow: inset 0px 0px 0px 0.125em #1DBDBF;
+}
+button.task span {
+	 display: block;
+	 color:#D3EEEF;
+}
+button.task > span {
+  display: block;
+  padding: 0.6em 0.8em;
+  border-radius: 0.2em;
+  border:0.063em solid #307F80;
+  background: -webkit-linear-gradient(bottom, #7EBFC0, #17989A); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom, #7EBFC0, #17989A); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom, #7EBFC0, #17989A); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom, #7EBFC0, #17989A); /* Standard syntax */
+
+	box-shadow: 0px 0.313em 0.125em -3px #307F80;
+	-webkit-box-shadow: 0px 0.313em 0.125em -3px #307F80;
+	-moz-box-shadow: 0px 0.313em 0.125em -3px #307F80;
+	-o-box-shadow: 0px 0.313em 0.125em -3px #307F80;
+
+	text-shadow: 0.125em 0.125em #307F80;
+	text-transform: uppercase;
+    font-size: 0.8em;
+    transition: border-color 0.5s ease;
+    font-weight: 900;
+}
+button.task:active {
+  background: -webkit-linear-gradient(top, #7EBFC0, #17989A); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(top, #7EBFC0, #17989A); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(top, #7EBFC0, #17989A); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to top, #7EBFC0, #17989A); /* Standard syntax */
+}
+button.task:active span {
+	color: #fff;
+}
+button.task:active > span
+{
+	border-color: #000;
+	transition: border-color 0.3s ease;
+}
+.star {
+    background-image: url(/css/icons/btnstar.png);
+    background-repeat: no-repeat;
+}
+
+.star.left {
+background-position: top left;
+padding-left:1.5em;
+}
+
+.star.right {
+background-position: top right;
+padding-right:1.5em;
+}
+

@@ -2,7 +2,7 @@
 	 <input ng-model="cartVm.buyerName" class="task" type="text" name="name" placeholder="Type the buyer name ...">
 </div>
 <div layout="row" layout-xs="column" layout-align="center">
-  <div flex layout-padding>
+  <div flex layout-padding class="product-wrapper">
     <md-radio-group ng-model="cartVm.total">
       <md-radio-button ng-repeat="item in cartVm.items"
                        ng-value="item.price"
@@ -18,7 +18,7 @@
       </md-radio-button>
     </md-radio-group>
   </div>
-  <div flex layout-padding ng-if="cartVm.total>0" class="fade">
+  <div flex layout-padding ng-if="cartVm.total>0" class="fade" id="cart-form-wrapper">
 	<form name="cartForm">
 		<div layout="row">
 		  <md-input-container>
@@ -27,19 +27,22 @@
 		           ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.05" required>
 		  </md-input-container>
 		</div>
-		<div layout="row">
+        <md-divider></md-divider>
+        <div layout="row" layout-align="center">
+            <change-statement change="cartVm.change"></change-statement>
+        </div>
+		<div layout="row" layout-align="center">
 		  <button type='button' class="task" ng-click="cartVm.buy(cartVm.received,cartVm.total)">
 		  	<span>
 		  		<span class="star left">
 		  			<span class="star right">
-		  				Buy
+		  				Click to buy
 		  			</span>
 		  		</span>
 		  	</span>
 		  </button>
 		</div>
 	</form>
-	<change-statement change="cartVm.change"></change-statement>
   </div>
 </div>
 

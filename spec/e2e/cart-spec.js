@@ -34,25 +34,4 @@ describe('Vending Machine Cart usage', function() {
 			});
 		});
 	});
-	describe('Given I am buying a Haribo', function() {
-		it('Should show haribo as a cart option', function() {
-			var hariboInput=element.all(by.id('haribo'));
-			expect(hariboInput.count()).toBe(1);
-		});
-		describe('When I push the buy button', function() {
-			beforeEach(function(){
-				var hariboInput=element.all(by.id('haribo'));
-				var inputAmount=element.all(by.model('inputAmount'));
-				var buyButton=element.all(by.buttonText('buy'));
-				inputAmount.sendKeys('2.00');
-				hariboInput.click();
-				buyButton.click();
-			});
-			it('Should then give the change with the smallest number of coins', function() {
-				var expectedOutputAmount='Give one coin of 5 cents, one coin of 50 cents and one coin of 1 euro';
-				var outputAmount=element.all(by.binding('cartVm.outputAmount'));
-				expect(outputAmount.getText()).toBe(expectedOutputAmount);
-			});
-		});
-	});
 });

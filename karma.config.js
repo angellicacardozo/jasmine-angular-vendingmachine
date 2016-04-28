@@ -18,7 +18,8 @@ module.exports = function(config) {
 		],
 
 		exclude: [
-			'public/lib/**/*.js'
+			'public/lib/**/*.js',
+			'spec/e2e/**/*.js'
 		],
 
 		reporters: ['progress'],

@@ -106,10 +106,10 @@ describe('ChangeService usage', function() {
     	});
         it('should express the change as a group of coins', function() {
             var expectedGroupOfCoins=[{
-                value:0.2,
-                quantity:1
-            },{
                 value:0.05,
+                quantity:1
+            }, {
+                value:0.2,
                 quantity:1
             }];
             var returnedGroup,returnedChange;

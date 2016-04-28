@@ -6,9 +6,10 @@
 (function() {
 "use strict";
 
-angular.module("machine.cart")
-		.controller('CartController', CartController)
-        .config(function($routeProvider) {
+angular
+	.module("machine.cart")
+	.controller('CartController', CartController)
+    .config(function($routeProvider) {
             $routeProvider.when('/cart', {
                 templateUrl: 'views/cart/index.html',
                 controller: 'CartController',

@@ -4,5 +4,6 @@
 **/
 (function() {
 'use strict';
-angular.module('machine.cart',[]);
+angular
+    .module('machine.cart',[]);
 })();

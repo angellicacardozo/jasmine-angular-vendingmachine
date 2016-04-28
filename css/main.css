@@ -45,6 +45,7 @@ md-radio-button.product-selection-block  .md-container {
 }
 #change-statement {
 	padding: 0.5em;
+    width: 11em;
 }
 #change-statement:before {
     color: #dadada;

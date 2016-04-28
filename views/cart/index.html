@@ -18,7 +18,7 @@
       </md-radio-button>
     </md-radio-group>
   </div>
-  <div flex layout-padding>
+  <div flex layout-padding ng-if="cartVm.total>0" class="fade">
 	<form name="cartForm">
 		<div layout="row">
 		  <md-input-container>

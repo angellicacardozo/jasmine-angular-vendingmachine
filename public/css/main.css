@@ -9,8 +9,11 @@ h1 {
     text-align: center;
     text-shadow: 0.125em 0.125em #D97B00;
 }
+body>div:first-of-type>div:last-of-type{
+
+    background-color: #fff7db;
+}
 body>div:first-of-type>div:last-of-type {
-    background-color: #fff;
     border: 1px solid #d97b00;
     border-radius: 0.2em;
     padding: 0 2em;
@@ -22,6 +25,22 @@ body>div:first-of-type>div:last-of-type {
 }
 .product-selection-block {
     border:1px solid #dadada;
+
+    box-shadow: 0px 0.313em 0.125em -3px #000;
+    -webkit-box-shadow: 0px 0.313em 0.125em -3px #000;
+    -moz-box-shadow: 0px 0.313em 0.125em -3px #000;
+    -o-box-shadow: 0px 0.313em 0.125em -3px #000;
+
+
+background: rgba(255,255,255,1);
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(242,242,242,1) 71%, rgba(237,237,237,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(71%, rgba(242,242,242,1)), color-stop(100%, rgba(237,237,237,1)));
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(242,242,242,1) 71%, rgba(237,237,237,1) 100%);
+background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(242,242,242,1) 71%, rgba(237,237,237,1) 100%);
+background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(242,242,242,1) 71%, rgba(237,237,237,1) 100%);
+background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(242,242,242,1) 71%, rgba(237,237,237,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0 );
+
 }
 md-radio-button.product-selection-block  .md-container {
 	left: 1em;
@@ -45,4 +64,15 @@ background: -o-linear-gradient(45deg, rgba(255,143,0,1) 0%, rgba(255,187,0,1) 10
 background: -ms-linear-gradient(45deg, rgba(255,143,0,1) 0%, rgba(255,187,0,1) 100%); /* ie10+ */
 background: linear-gradient(45deg, rgba(255,143,0,1) 0%, rgba(255,187,0,1) 100%); /* w3c */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFBB00', endColorstr='#ff8f00',GradientType=1 ); /* ie6-9 */
+}
+
+/* The starting CSS styles for the enter animation */
+.fade.ng-enter {
+  transition:0.5s linear all;
+  opacity:0;
+}
+
+/* The finishing CSS styles for the enter animation */
+.fade.ng-enter.ng-enter-active {
+  opacity:1;
 }

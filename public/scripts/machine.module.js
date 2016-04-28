@@ -8,6 +8,7 @@ angular
     .module('machine',[
     	'ngRoute',
         'ngMaterial',
+        'ngAnimate',
     	'machine.cart'
 	])
 	.config(function($routeProvider) {

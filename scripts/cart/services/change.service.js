@@ -28,6 +28,10 @@ function ChangeService() {
 			return this.coinList[coinIndex];
 		}
 
+		if(amount>2) {
+			return 2;
+		}
+
 		min=0;
 		max=this.coinList.length;
 		coinIndex=min;

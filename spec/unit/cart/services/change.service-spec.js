@@ -47,6 +47,15 @@ describe('ChangeService usage', function() {
 
             expect(returnedChange).toEqual(expectedChange);
     });
+    it('should return the change when the buyer inputs coins greater than 2 euros', function() {
+            var amountToChange= 8-(0.45);
+            var expectedChange=[2,2,2,1,0.5,0.05];
+            var returnedChange;
+
+            returnedChange=changeService.getChangeGivenAmount(amountToChange);
+
+            expect(returnedChange).toEqual(expectedChange);
+    });
     describe('When the buyer gives 2 euros to buy 0.75', function() {
     	it('should return 3 coins', function() {
     		var amountToChange= 2-(0.75);
